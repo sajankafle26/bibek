@@ -1,0 +1,358 @@
+@import 'var';
+@import 'extends';
+@import 'mixins';
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img 
+{
+    display: block;
+}
+body
+{
+    font-size: 16px;
+    color: #616161;
+    line-height: 1.5;
+    font-family: lato;
+}
+.container
+{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+header
+{
+    background: $lb;
+    padding: 10px 0;
+    color: $w;
+    font-size: 25px;
+    transition: 0.9s;
+    .logo 
+    {
+        transition: 0.9s ease-in-out;
+        img 
+        {
+            height: 65px;
+        }
+    }
+}
+
+nav
+{
+    background: $b;
+    ul 
+    {
+        li 
+        {
+            display: inline-block;
+            position: relative;
+            ul 
+            {
+                position:absolute;
+                top: 100%;
+                left: 0;
+                width: 230px;
+                display: none;
+            }
+            a 
+            {
+                display: block;
+                padding: 20px 25px;
+                text-decoration: none;
+                color: #fff;
+                &:hover 
+                {
+                    background: rgba($color: #000000, $alpha: 0.5)
+                }
+            }
+            &:hover
+            {
+                ul 
+                {
+                    display: block;
+                }
+            }
+        }
+    }
+    .active a
+    {
+        background: rgba($color: #000000, $alpha: 0.5)
+    }    
+}
+
+.banner
+{
+    background: url(https://www.acetravels.com/public/images/search-cover.jpg);
+    padding: 50px 0;
+    color: $w;
+    text-align: center;
+    h1
+    {
+        padding: 25px 0;
+        font-size: 34px;
+        font-weight: normal;
+    }
+    input 
+    {
+        width: 60%;
+        height: 45px;
+        border: 0;
+        padding-left: 20px;
+        margin: 20px 0;
+    }
+    button 
+    {
+        background: orange;
+        color: $w;
+        border: none;
+        padding: 15px;
+    }
+}
+
+
+.page-title
+{
+    position: relative;
+    h1
+    {
+        color: $b;
+        text-transform: uppercase;
+        font-size: 34px;
+        font-weight: normal;
+        margin: 10px 25px;
+    }
+    &:before
+    {
+        background-color: transparent;
+    border-left: 2px solid $o;
+    border-top: 2px solid $o;
+    content: "";
+    display: inline-block;
+    height: 23px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 25px;
+    }
+    p 
+    {
+        padding-left: 25px;
+    }
+}
+.offer
+{
+    padding: 50px 0;
+    .special
+    {
+        padding: 25px 0;
+        .special-box
+        {
+            flex-basis: 49%;
+            margin: 20px 0;
+            position: relative;
+            img 
+            {
+                width: 100%;
+            }
+            .special-content
+            {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                left: 0;
+                color: $w;
+                padding: 40px;
+                text-align: center;
+                h2 
+                {
+                    font-size: 30px;
+                }
+                .btn 
+                {
+                    background: $o;
+                    padding: 10px 25px;
+                    border-radius: 15px;
+                    display: inline-block;
+                    text-decoration: none;
+                    margin-top: 10px;
+                    color: $w;
+                }
+            }
+        }
+    }
+}
+
+.trips
+{
+    .trips-card
+    {
+        margin: 25px 0;
+        background: $w;
+        flex-basis: 32%;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.5);
+        img 
+        {
+            width: 100%;
+        }
+        .trip-head
+        {
+            position: relative;
+            .trip-title
+            {
+                position:absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 20px;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                color: $w;
+                h2 
+                {
+                    font-size: 18px;
+                    font-weight: normal;
+                }
+            }
+            .trip-day
+            {
+                position: absolute;
+                top: 30px; left: 0;
+                background: $o; color: $w;
+                padding: 25px;
+            }
+        }
+        .trip-body
+        {
+            padding: 15px;
+            .price 
+            {
+                color: $o;
+                font-size: 22px;
+                span 
+                {
+                    color: $b;
+                    font-size: 18px;
+                    display: block;
+                }
+            }
+            .vd
+            {
+                border: 1px solid $b;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.asia
+{
+     
+.asia-card
+{
+    background: #fff;
+    flex-basis: 47%;
+    justify-content: flex-start;
+    margin: 25px 25px 0 0 ;
+    .asia-left
+    {
+        flex-basis: 50%;
+        padding-right: 20px;
+        img 
+        {
+            width: 100%;
+        }
+    }
+}
+}
+.clintessays
+{
+    padding: 50px;
+    background: $b;
+    color: $w;
+    text-align: center;
+    h1 
+    {
+        padding: 40px 0;
+    }
+}
+
+
+footer
+{
+    .flex
+    {
+    flex-wrap: wrap;
+    }
+    color: $w;
+    .top 
+    {
+      background: $lb;
+      padding: 25px 0;
+      .footer-box
+      {
+          img 
+          {
+              width: 100%;
+          }
+          flex-basis: 24%;
+          padding: 15px;
+          ul 
+          {
+              list-style: none;
+              li
+              {
+                  line-height: 1.9;
+                  border-bottom: 1px solid $b;
+                  span 
+                  {
+                      font-weight: bold;
+                  }
+              }
+          }
+          p 
+          {
+              color: yellow;
+          }
+      }
+    }
+    .bottom 
+    {
+        background: $b;
+        padding: 15px 0;
+    }
+}
+
+.owl-nav
+{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 23px;
+}
+.sticky
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1234;
+    width: 100%;
+    box-shadow: 0px 3px 10px -6px rgba($color: #000000, $alpha: 0.5);
+    img 
+    {
+    height: 45px !important;
+    }
+}
+ 
+
+
+@media(max-width: 780px)
+{
+    .flex{ flex-direction: column;}
+    .container{ padding: 15px;}
+    nav ul{ display: none;}
+    .trips .flex{ flex-direction: row;}
+}

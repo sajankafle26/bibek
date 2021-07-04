@@ -1,0 +1,34 @@
+.flex
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+::placeholder {
+    color: $b;
+    opacity: 1; /* Firefox */
+  }
+:focus
+{
+    border: none;
+    outline: 0;
+}
+.grey
+{
+    background: #F1F1F1;
+    padding: 50px 0;
+    .flex 
+    {
+        flex-wrap: wrap;
+    }
+}
+
+.white
+{
+    background: #fff;
+    padding: 50px 0;
+    .flex 
+    {
+        flex-wrap: wrap;
+    }
+}
